@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.red{
+    		background-color: red;
+    	}
+    	div{
+    		display: inline-block;
+    		width: 470px;
+    		border: 1px solid;
+    		padding-right: 30px;
+    	}
+	</style>
+	
+	<body>
+		<h2>用原生js和jq实现导航栏的选中状态的切换</h2>
+		<p>原生js实现</p>
+	   	<div class="menu1">
+		   	<ul>
+			   	<li class="red some">1</li>
+			   	<li>2</li>
+			   	<li>3</li>
+			   	<li>4</li>
+			   	<li>5</li>
+		   </ul>
+	   	</div>
+		<br />
+		<br />
+		<p>jq实现</p>
+		<div class="menu2">
+		   	<ul>
+			   	<li class="red some">1</li>
+			   	<li>2</li>
+			   	<li>3</li>
+			   	<li>4</li>
+			   	<li>5</li>
+		   </ul>
+	   </div>
+		
+	</body>
+	<script src="js/jquery-3.0.0.min.js" charset="utf-8"></script>
+	<script>
+		var li = $('.menu1 ul li');
+			for (var index=0; index < li.length; index++) {
+			  	(function (index) {
+			    	li[index].onclick = function () {
+//						console.log(index);
+						for (var i=0; i < li.length; i++) {
+							li[i].classList.remove('red');
+						}
+						li[index].classList.add('red');
+			    	};
+			    })(index);
+			}
+        
+        $('.menu2 ul li').click(function(){
+        	$(this).siblings('li').removeClass('red');
+        	$(this).addClass('red');
+        })	
+	</script>
+</html>
