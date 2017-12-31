@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+div{
+	display: inline-block;
+	margin-bottom: 90px;
+}
+/*纯css实现下来菜单*/
+.menu1 {
+	font-family: arial, sans-serif;
+	font-size: 14px;
+	width: 750px;
+}
+.menu1 ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.menu1 ul li {
+	float: left;
+	position: relative;
+}
+.menu1 ul li a,
+.menu1 ul li a:visited {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 104px;
+	height: 30px;
+	color: #000;
+	border: 1px solid #fff;
+	border-width: 1px 1px 0 0;
+	background: #c9c9a7;
+	line-height: 30px;
+	font-size: 11px;
+}
+
+/*隐藏二级菜单ul*/
+.menu1 ul li ul {
+	display: none;
+}
+/*隐藏结束*/
+
+.menu1 ul li:hover a {
+	color: #fff;
+	background: #b3ab79;
+}
+
+/*显示二级菜单*/
+.menu1 ul li:hover ul {
+	display: block;
+	position: absolute;
+	top: 31px;
+	left: 0px;
+	width: 105px;
+}
+/*结束*/
+
+/*添加二级菜单鼠标移过的样式*/
+.menu1 ul li:hover ul li a {
+	display: block;
+	background: #faeec7;
+	color: #000;
+	width: 105px;
+}
+.menu1 ul li:hover ul li a:hover {
+	background: #dfc184;
+	color: #000;
+}
+
+
+/*用原生js实现下拉菜单*/
+.menu2 li a {
+	text-decoration: none;
+	background-color: rgba(56, 89, 45, .6);
+	display: inline-block;
+	width: 100%;
+	line-height: 25px;
+	height: 100%;
+	margin-right: 2px;
+	color: white;
+}
+.menu2 li:hover a {
+	background-color: rgba(56, 89, 45, .9);
+}
+.menu2 li,.menu2 li ul {
+	list-style-type: none;
+	width: 100px;
+}
+.menu2 li {
+	float: left;
+	text-align: center;
+	position: relative;
+	height: 25px;
+	margin-right: 1px;
+	line-height: 25px;
+}
+.menu2 li ul li {
+	flex: none;
+	cursor: pointer;
+}
+.menu2 li a ul:hover{
+	background-color: rgba(65, 98, 12, 0.5);
+}
+.menu2 li ul li:hover {
+	background-color: rgba(65, 98, 12, 0.5);
+}
+.menu2 li ul {
+	display: none;
+	position: absolute;
+	background-color: rgba(65, 98, 12, 0.3);
+}
+
+
+
+/*用jq实现下拉菜单*/
+.menu3 li a {
+	text-decoration: none;
+	background-color: rgba(65,78,14, .6);
+	display: inline-block;
+	width: 100%;
+	line-height: 25px;
+	height: 100%;
+	margin-right: 2px;
+	color: white;
+}
+.menu3 li:hover a {
+	background-color: rgba(65,78,14, .9);
+}
+.menu3 li,.menu3 li ul {
+	list-style-type: none;
+	width: 100px;
+}
+.menu3 li {
+	float: left;
+	text-align: center;
+	position: relative;
+	height: 25px;
+	margin-right: 1px;
+	line-height: 25px;
+}
+.menu3 li ul li {
+	flex: none;
+	cursor: pointer;
+}
+.menu3 li ul li:hover {
+	background-color: rgba(65, 98, 52, 0.5);
+}
+.menu3 li ul {
+	display: none;
+	position: absolute;
+	background-color: rgba(65, 98, 52, 0.3);
+}
